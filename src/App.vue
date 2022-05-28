@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <my-header></my-header>
-    <my-form></my-form>
+    <my-form @add="addTodo"></my-form>
     <my-todos></my-todos>
   </div>
 </template>
@@ -15,6 +15,11 @@ export default {
     MyHeader,
     MyForm,
     MyTodos,
+  },
+  methods: {
+    addTodo(todo) {
+      console.log(todo);
+    },
   },
 };
 </script>

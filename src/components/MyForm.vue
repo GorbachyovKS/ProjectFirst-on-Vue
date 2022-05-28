@@ -3,15 +3,32 @@
     <form class="form">
       <p>Create a list if tasks :</p>
       <div>
-        <my-input></my-input>
-        <my-button class="button-form">Add</my-button>
+        <my-input v-model="todo.name"></my-input>
+        <my-button class="button-form" @click.prevent="addTodo">Add</my-button>
       </div>
     </form>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      todo: {
+        name: "",
+      },
+    };
+  },
+  methods: {
+    addTodo() {
+      this.todo.id = Date.now();
+      this.$emit("add", this.todo);
+      this.todo = {
+        name: "",
+      };
+    },
+  },
+};
 </script>
 
 <style scoped>

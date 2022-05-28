@@ -12,12 +12,18 @@
 
 <script>
 export default {
+  props: {
+    todos: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
       todos: [
-        { id: "1", name: "Hello" },
-        { id: "2", name: "my" },
-        { id: "3", name: "App" },
+        { id: 1, name: "Hello" },
+        { id: 2, name: "my" },
+        { id: 3, name: "App" },
       ],
     };
   },

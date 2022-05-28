@@ -10,11 +10,6 @@
 <script>
 export default {
   name: "my-input",
-  data() {
-    return {
-      todo: "",
-    };
-  },
 };
 </script>
 
