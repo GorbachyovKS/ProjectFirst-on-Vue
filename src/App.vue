@@ -2,7 +2,7 @@
   <div class="wrapper">
     <my-header></my-header>
     <my-form @add="addTodo"></my-form>
-    <my-todos></my-todos>
+    <my-todos :todos="todos"></my-todos>
   </div>
 </template>
 
@@ -16,9 +16,14 @@ export default {
     MyForm,
     MyTodos,
   },
+  data() {
+    return {
+      todos: [],
+    };
+  },
   methods: {
     addTodo(todo) {
-      console.log(todo);
+      this.todos.push(todo);
     },
   },
 };

@@ -3,7 +3,7 @@
     <form class="form">
       <p>Create a list if tasks :</p>
       <div>
-        <my-input v-model="todo.name"></my-input>
+        <my-input v-model="todo.name" placeholder="Add a new task"></my-input>
         <my-button class="button-form" @click.prevent="addTodo">Add</my-button>
       </div>
     </form>
@@ -21,11 +21,13 @@ export default {
   },
   methods: {
     addTodo() {
-      this.todo.id = Date.now();
-      this.$emit("add", this.todo);
-      this.todo = {
-        name: "",
-      };
+      if (this.todo.name) {
+        this.todo.id = Date.now();
+        this.$emit("add", this.todo);
+        this.todo = {
+          name: "",
+        };
+      }
     },
   },
 };
