@@ -2,16 +2,19 @@
   <div class="wrapper">
     <my-header></my-header>
     <my-form></my-form>
+    <my-todos></my-todos>
   </div>
 </template>
 
 <script>
 import MyHeader from "./components/MyHeader.vue";
 import MyForm from "./components/MyForm.vue";
+import MyTodos from "./components/MyTodos.vue";
 export default {
   components: {
     MyHeader,
     MyForm,
+    MyTodos,
   },
 };
 </script>
@@ -56,5 +59,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
 }
 </style>

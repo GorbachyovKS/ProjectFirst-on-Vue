@@ -25,5 +25,7 @@ export default {};
 
 .button-form {
   background-color: #32d56f;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 </style>
