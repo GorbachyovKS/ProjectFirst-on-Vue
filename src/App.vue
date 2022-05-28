@@ -2,7 +2,11 @@
   <div class="wrapper">
     <my-header></my-header>
     <my-form @add="addTodo"></my-form>
-    <my-todos :todos="todos"></my-todos>
+    <my-todos
+      :todos="todos"
+      @doneTodo="doneTodo"
+      @deleteTodo="deleteTodo"
+    ></my-todos>
   </div>
 </template>
 
@@ -24,6 +28,16 @@ export default {
   methods: {
     addTodo(todo) {
       this.todos.push(todo);
+    },
+    doneTodo(todo) {
+      setTimeout(() => {
+        this.todos = this.todos.filter((todoDone) => todoDone.id !== todo.id);
+      }, 1000);
+    },
+    deleteTodo(todo) {
+      setTimeout(() => {
+        this.todos = this.todos.filter((todoDone) => todoDone.id !== todo.id);
+      }, 1000);
     },
   },
 };

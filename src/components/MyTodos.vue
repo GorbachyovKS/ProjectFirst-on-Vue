@@ -1,6 +1,12 @@
 <template>
   <div class="my-todos">
-    <my-todo v-for="todo in todos" :key="todo.id" :todo="todo"></my-todo>
+    <my-todo
+      v-for="todo in todos"
+      :key="todo.id"
+      :todo="todo"
+      @doneTodo="$emit('doneTodo', todo)"
+      @deleteTodo="$emit('deleteTodo', todo)"
+    ></my-todo>
   </div>
 </template>
 
@@ -20,14 +26,5 @@ export default {
 <style scoped>
 .my-todos {
   width: 100%;
-}
-.todos {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #342f4f;
-  padding: 15px;
-  border-radius: 15px;
-  margin: 15px 0;
 }
 </style>
