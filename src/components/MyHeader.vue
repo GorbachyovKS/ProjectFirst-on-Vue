@@ -8,8 +8,9 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 .header {
+  padding: 20px 0 10px;
   font-size: 1.1rem;
 }
 </style>
