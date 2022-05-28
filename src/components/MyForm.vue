@@ -4,7 +4,7 @@
       <p>Create a list if tasks :</p>
       <div>
         <input type="text" placeholder="Add a new task" class="input-form" />
-        <button class="button-form">Add</button>
+        <my-button class="button-form">Add</my-button>
       </div>
     </form>
   </div>
@@ -37,10 +37,6 @@ export default {};
 }
 
 .button-form {
-  padding: 8px 20px;
-  font-weight: 600;
-  font-size: 1.3rem;
-  border-radius: 10px;
-  text-transform: uppercase;
+  background-color: #32d56f;
 }
 </style>
